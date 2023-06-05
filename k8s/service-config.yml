@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  SERVICE_URL: http://backend-rhsso-openshift-demo.apps-crc.testing
+immutable: false
+kind: ConfigMap
+metadata:
+  name: service-config
+  namespace: rhsso-openshift-demo
