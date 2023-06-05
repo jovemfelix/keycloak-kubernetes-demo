@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: backend
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/instance: backend
+  name: backend
+  namespace: rhsso-openshift-demo
+spec:
+  host: backend-rhsso-openshift-demo.apps-crc.testing
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: backend
+    weight: 100
+  wildcardPolicy: None

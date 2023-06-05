@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: frontend
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/instance: frontend
+  name: frontend
+  namespace: rhsso-openshift-demo
+spec:
+  host: frontend-rhsso-openshift-demo.apps-crc.testing
+  port:
+    targetPort: 80-tcp
+  to:
+    kind: Service
+    name: frontend
+    weight: 100
+  wildcardPolicy: None
