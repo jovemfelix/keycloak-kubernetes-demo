@@ -10,7 +10,6 @@ metadata:
   name: frontend
   namespace: rhsso-openshift-demo
 spec:
-  host: frontend-rhsso-openshift-demo.apps-crc.testing
   port:
     targetPort: 80-tcp
   to:

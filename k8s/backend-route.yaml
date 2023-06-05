@@ -10,7 +10,6 @@ metadata:
   name: backend
   namespace: rhsso-openshift-demo
 spec:
-  host: backend-rhsso-openshift-demo.apps-crc.testing
   port:
     targetPort: 8080-tcp
   to:

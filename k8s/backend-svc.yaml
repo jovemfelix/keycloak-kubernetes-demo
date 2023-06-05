@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: backend
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/instance: backend
+  name: backend
+  namespace: rhsso-openshift-demo
+spec:
+  clusterIP: 10.217.4.218
+  clusterIPs:
+  - 10.217.4.218
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 8080
+  selector:
+    deployment: backend
