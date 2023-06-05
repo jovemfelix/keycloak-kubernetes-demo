@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
   labels:
     app: backend
     app.kubernetes.io/component: backend
@@ -8,14 +10,15 @@ metadata:
   name: backend
   namespace: rhsso-openshift-demo
 spec:
-  clusterIP: 10.217.4.218
+  clusterIP: 10.217.4.220
   clusterIPs:
-  - 10.217.4.218
+  - 10.217.4.220
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - port: 8080
+  - name: 8080-tcp
+    port: 8080
   selector:
     deployment: backend
