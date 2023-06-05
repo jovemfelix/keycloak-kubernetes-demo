@@ -1,0 +1,15 @@
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  labels:
+    app: sso
+  name: sso
+  namespace: rhsso
+spec:
+  externalAccess:
+    enabled: true
+  instances: 1
+  keycloakDeploymentSpec:
+    imagePullPolicy: IfNotPresent
+  postgresDeploymentSpec:
+    imagePullPolicy: IfNotPresent
