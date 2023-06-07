@@ -9,13 +9,6 @@ metadata:
     app.kubernetes.io/instance: frontend
   name: frontend
 spec:
-  clusterIP: 10.217.5.81
-  clusterIPs:
-  - 10.217.5.81
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - name: 80-tcp
     port: 80

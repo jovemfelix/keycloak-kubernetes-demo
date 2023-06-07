@@ -9,13 +9,6 @@ metadata:
     app.kubernetes.io/instance: backend
   name: backend
 spec:
-  clusterIP: 10.217.4.220
-  clusterIPs:
-  - 10.217.4.220
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - name: 8080-tcp
     port: 8080
