@@ -8,7 +8,6 @@ metadata:
     app.kubernetes.io/component: backend
     app.kubernetes.io/instance: backend
   name: backend
-  namespace: rhsso-openshift-demo
 spec:
   port:
     targetPort: 8080-tcp

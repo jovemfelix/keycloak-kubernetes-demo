@@ -8,7 +8,6 @@ metadata:
     app.kubernetes.io/component: frontend
     app.kubernetes.io/instance: frontend
   name: frontend
-  namespace: rhsso-openshift-demo
 spec:
   port:
     targetPort: 80-tcp

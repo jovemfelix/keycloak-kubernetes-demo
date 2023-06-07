@@ -10,7 +10,6 @@ metadata:
     app.kubernetes.io/component: backend
     app.kubernetes.io/instance: backend
   name: backend
-  namespace: rhsso-openshift-demo
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
