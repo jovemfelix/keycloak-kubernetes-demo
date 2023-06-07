@@ -35,7 +35,7 @@ spec:
       - envFrom:
         - configMapRef:
             name: rhsso-config
-        image: quay.io/rfelix/rhsso-ocp-demo-backend@sha256:262110960b1796471aa7daa2d2d1b6a1c507cf825ba093d302169f34ce63ecbc
+        image: quay.io/rfelix/rhsso-ocp-demo-backend:1.0.0
         imagePullPolicy: IfNotPresent
         name: backend
         ports:

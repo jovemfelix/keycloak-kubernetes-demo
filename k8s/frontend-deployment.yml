@@ -37,7 +37,8 @@ spec:
             name: rhsso-config
         - configMapRef:
             name: service-config
-        image: quay.io/rfelix/rhsso-ocp-demo-frontend@sha256:4dfcef32df746205e34913fc1c9d4fe2992278fcb4d34fcdd0edc2759e3c5d65
+        image: quay.io/rfelix/rhsso-ocp-demo-frontend:1.0.1
+#        image: image-registry.openshift-image-registry.svc.cluster.local:5000/rhsso-openshift-demo/rhsso-ocp-demo-frontend:latest
         imagePullPolicy: IfNotPresent
         name: frontend
         ports:
